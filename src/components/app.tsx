@@ -7,9 +7,9 @@ import NotFoundPage from '../routes/notfound';
 import Header from './header';
 import LazyPage from '../routes/lazyPage';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
 if ((module as any).hot) {
-  // tslint:disable-next-line:no-var-requires
+  // eslint-disable-next-line global-require
   require('preact/debug');
 }
 
@@ -17,6 +17,7 @@ const App: FunctionalComponent = () => {
   let currentUrl: string;
 
   const handleRoute = (e: RouterOnChangeArgs) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     currentUrl = e.url;
   };
 

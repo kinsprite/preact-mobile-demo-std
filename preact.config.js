@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 import { resolve } from 'path';
 
 export default {
@@ -8,7 +10,8 @@ export default {
      * @param {object} config - original webpack config.
      * @param {object} env - options passed to the CLI.
      * @param {WebpackConfigHelpers} helpers - object with useful helpers for working with the webpack config.
-     * @param {object} options - this is mainly relevant for plugins (will always be empty in the config), default to an empty object
+     * @param {object} options - this is mainly relevant for plugins (will always be empty in the config),
+     *                           default to an empty object
      * */
   webpack(config, env, helpers, options) {
     config.module.rules[4].use.splice(1, 0, {
@@ -26,5 +29,8 @@ export default {
       'src',
       'index',
     );
+
+    // minimize
+    config.optimization.minimize = false;
   },
 };

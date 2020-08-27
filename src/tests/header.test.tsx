@@ -1,5 +1,6 @@
 import { h } from 'preact';
 // See: https://github.com/preactjs/enzyme-adapter-preact-pure
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { shallow } from 'enzyme';
 import Header from '../components/header';
 
