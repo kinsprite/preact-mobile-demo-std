@@ -1,11 +1,11 @@
 import { FunctionalComponent, h } from 'preact';
 import { Route, Router, RouterOnChangeArgs } from 'preact-router';
 
-import Home from '../routes/home';
-import Profile from '../routes/profile';
-import NotFoundPage from '../routes/notfound';
-import Header from './header';
-import LazyPage from '../routes/lazyPage';
+import Home from './routes/home';
+import Profile from './routes/profile';
+import NotFoundPage from './routes/notfound';
+import Header from './components/header';
+import LazyPage from './routes/lazy';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
 if ((module as any).hot) {

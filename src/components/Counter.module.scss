@@ -1,0 +1,10 @@
+@import './sass/controls-mixin';
+
+.label {
+  margin: $content-margin $content-margin 0 0;
+}
+
+.btn {
+  @include button($btn-color);
+  width: 0.64rem;
+}

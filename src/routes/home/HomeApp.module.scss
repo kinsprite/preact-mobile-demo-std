@@ -1,0 +1,34 @@
+
+@import '../../components/sass/controls-mixin';
+@import '../../components/sass/var';
+
+.AppHeader {
+  position: relative;
+  min-height: calc(100vh - #{$nav-height + $footer-height});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  > button {
+    @include button;
+    display: block;
+    min-width: 8em;
+  }
+}
+
+.AppFooter {
+  min-height: $footer-height;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.FooterLink {
+  margin: 0 $content-margin;
+  color: #66CDAA;
+  text-decoration: none;
+}

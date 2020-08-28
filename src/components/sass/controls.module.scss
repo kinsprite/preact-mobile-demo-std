@@ -1,0 +1,10 @@
+@import './var';
+@import './controls-mixin';
+
+.btn {
+  @include button($btn-color);
+}
+
+.theadRow {
+  color: $head-color
+}

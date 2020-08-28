@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true
+    es2020: true,
+    node: true,
   },
   plugins: [
     'react',
@@ -13,7 +14,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended'
   ],
@@ -50,6 +51,9 @@ module.exports = {
     ],
     'react/no-unknown-property': [ 'error', { ignore: [ 'class' ] } ],
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',

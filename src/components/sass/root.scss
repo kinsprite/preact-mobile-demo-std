@@ -1,0 +1,39 @@
+
+@import './var';
+
+html {
+  background-color: $bg-color;
+  font-size: 100px;
+  font-size: 13.88888889vw;
+  font-size: 13.88888889vmin;
+  width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.24rem;
+  color: $body-color;
+}
+
+#app {
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $head-color
+}
+
+:focus {
+  outline: none;
+}
+
+nav ul,
+nav ol {
+  margin: 0;
+}
+
+tr > th,
+tr > td {
+  padding: 0 0.08rem;
+}

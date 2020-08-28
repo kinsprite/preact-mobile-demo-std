@@ -31,6 +31,15 @@ export default {
     );
 
     // minimize
-    config.optimization.minimize = false;
+    // config.optimization.minimize = false;
+
+    // polyfill
+    if (config.entry.polyfills) {
+      config.entry.polyfills = resolve(
+        process.cwd(),
+        'src',
+        'polyfill',
+      );
+    }
   },
 };
