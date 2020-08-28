@@ -18,6 +18,8 @@ import UserPage from './routes/user';
 import BooksPage from './routes/books';
 import LazyPage from './routes/lazy';
 
+import dbInit from './redux/dbInit';
+
 import styles from './App.module.scss';
 
 type Props = {
@@ -26,7 +28,7 @@ type Props = {
   routeContent?: any,
 };
 
-const App : FunctionalComponent<Props> = ({ preloadedState, routeContent }: Props) => {
+const App : FunctionalComponent<Props> = ({ preloadedState = dbInit(), routeContent }: Props) => {
   let currentUrl: string;
 
   const handleRoute = (e: RouterOnChangeArgs) => {

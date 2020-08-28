@@ -2,6 +2,8 @@
 
 import { resolve } from 'path';
 
+import devServerBefore from './devServerBefore';
+
 export default {
   /**
      * Function that mutates the original webpack config.
@@ -40,6 +42,10 @@ export default {
         'src',
         'polyfill',
       );
+    }
+
+    if (config.devServer) {
+      config.devServer.before = devServerBefore;
     }
   },
 };

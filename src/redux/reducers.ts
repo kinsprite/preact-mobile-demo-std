@@ -29,10 +29,15 @@ function books(state = [], action) {
   }
 }
 
+function lazyValue(state = 0, action) {
+  return state;
+}
+
 const reducers = combineReducers({
   age,
   name,
   books,
+  lazyValue,
 });
 
 export default reducers;
